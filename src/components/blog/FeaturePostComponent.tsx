@@ -19,10 +19,10 @@ const FeaturePostComponent = (post: IPost) => {
       </div>
       <picture className='w-[515px] h-[359px]' >
         {
-          imageUrl ?
-            (<Image src={imageUrl} width={515} height={359} alt={post.title} />) :
-            (<Image src='/default_placeholder.png' width={515} height={359} alt={post.title} />)
-        } 
+          imageUrl
+            ? (<Image src={imageUrl} width={515} height={359} alt={post.title} />)
+            : (<Image src='/default_placeholder.png' width={515} height={359} alt={post.title} />)
+        }
       </picture>
 
     </div>

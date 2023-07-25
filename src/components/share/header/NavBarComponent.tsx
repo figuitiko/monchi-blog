@@ -9,7 +9,9 @@ const NavBarComponent: React.FC = () => {
       <div>
         <Link href='/blog'>blog</Link>
       </div>
-      <div>Sobre Nosotros</div>
+      <div>
+        <Link href='/about'>Acerca de</Link>
+      </div>
       <div>Contactenos</div>
     </nav>
   )

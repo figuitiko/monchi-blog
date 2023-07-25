@@ -12,7 +12,8 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         hero: 'url("/hero-bg.svg")',
-        ball: 'url("/ball.png")'
+        ball: 'url("/ball.png")',
+        about: 'url("/bg-about.png")'
       },
       fontFamily: {
         inter: ['Inter', 'Sans-serif'],

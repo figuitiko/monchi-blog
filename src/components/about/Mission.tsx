@@ -27,7 +27,6 @@ const Mission = () => {
            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.
           </p>
         </div>
-        
       </div>
       <WhyComponent />
     </section>

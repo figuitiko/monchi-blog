@@ -30,7 +30,6 @@ const Mission = () => {
         
       </div>
       <WhyComponent />
-
     </section>
   )
 }

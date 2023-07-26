@@ -1,6 +1,6 @@
 'use client'
-import { textVariant } from "@/utils/motions"
-import CatBoxItemComponent, { iconCats } from "./CatBoxItemComponent"
+import { textVariant } from '@/utils/motions'
+import CatBoxItemComponent, { iconCats } from './CatBoxItemComponent'
 import { motion } from 'framer-motion'
 
 const categories = [
@@ -23,11 +23,8 @@ const categories = [
     title: 'Futbol Americano',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     icon: 'american'
-  } 
-  
-
+  }
 ]
-
 
 const CategoryComponent = () => {
   let delay = 0
@@ -35,8 +32,8 @@ const CategoryComponent = () => {
     <section id='categories' className='flex flex-col mt-[128px] px-[80px] w-full h-[324px] items-center '>
       <motion.div
       variants={textVariant(0.5)}
-      initial="hidden"
-      whileInView="show"
+      initial='hidden'
+      whileInView='show'
       viewport={{ once: false, amount: 0.25 }}
       >
         <h3 className='font-sen text-[36px] font-bold leading-[48px]'>Escoge una Categoría</h3>
@@ -44,16 +41,16 @@ const CategoryComponent = () => {
       <div className='flex gap-8 mt-12'>
         {
           categories.map((category) => {
-              delay += 0.5
-             return (
-              <CatBoxItemComponent 
-                key={category.title} 
-                title={category.title} 
-                description ={category.description} 
-                icon={(category.icon) as keyof typeof iconCats} 
+            delay += 0.5
+            return (
+              <CatBoxItemComponent
+                key={category.title}
+                title={category.title}
+                description={category.description}
+                icon={(category.icon) as keyof typeof iconCats}
                 delay={delay}
-                />
-             )
+              />
+            )
           }
           )
         }

@@ -1,25 +1,26 @@
-import { IPost } from "@/types"
-import Image from "next/image"
-import Link from "next/link"
+import { IPost } from '@/types'
+import Image from 'next/image'
+import Link from 'next/link'
 import { Parser } from 'html-to-react'
 interface Props {
   post: IPost
 }
 
-const PostBoxComponent = ({post}: Props) => {
+const PostBoxComponent = ({ post }: Props) => {
   return (
     <div className='flex mt-[64px]'>
       <picture>
         {
-          post.imageUrl ? (<Image src={post.imageUrl} width={490} height={318} alt={post.title} />) :
-          (<Image src='/default_placeholder.png' width={490} height={318} alt={post.title} />)
-        }        
+          post.imageUrl
+            ? (<Image src={post.imageUrl} width={490} height={318} alt={post.title} />)
+            : (<Image src='/default_placeholder.png' width={490} height={318} alt={post.title} />)
+        }
       </picture>
       <div className='flex items-center pl-8'>
-        <div className='flex flex-col w-[624px] h-[208px]'>          
+        <div className='flex flex-col w-[624px] h-[208px]'>
             {post.categories?.map((category, id) => (
               <span key={`${category}${id}`} className='text-[#592EA9] text-inter text-[1rem] uppercase leading-5 tracking-[3px] font-semibold'>
-               { id===0 ? category : ` | ${category}`}
+               { id === 0 ? category : ` | ${category}`}
               </span>
             ))
             }
@@ -32,7 +33,7 @@ const PostBoxComponent = ({post}: Props) => {
               {
                 Parser().parse(post.excerpt)
               }
-            </div>      
+            </div>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ interface Props {
   description: string
   isReadMore?: boolean
 }
-const AboutItemComponent = ({title, heading, description, isReadMore= false}: Props) => {
+const AboutItemComponent = ({ title, heading, description, isReadMore = false }: Props) => {
   return (
     <div className='flex flex-col gap-4 '>
       <span className='text-[16px] leading-5 font-semibold text-[#232536]'>{title}</span>

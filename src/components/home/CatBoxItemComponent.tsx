@@ -1,15 +1,13 @@
 'use client'
-import { IoBaseballOutline, IoBasketballOutline, IoAmericanFootballOutline,IoFootballOutline } from "react-icons/io5";
+import { IoBaseballOutline, IoBasketballOutline, IoAmericanFootballOutline, IoFootballOutline } from 'react-icons/io5'
 import { motion } from 'framer-motion'
-
 interface Props {
   title: string
   description: string
   icon: keyof typeof iconCats
-  delay?: number  
-
+  delay?: number
 }
-export const iconCats ={
+export const iconCats = {
   baseball: <IoBaseballOutline className='w-[38px] h-[38px]' />,
   basketball: <IoBasketballOutline className='w-[38px] h-[38px]' />,
   american: <IoAmericanFootballOutline className='w-[38px] h-[38px]' />,
@@ -17,13 +15,13 @@ export const iconCats ={
 
 }
 
-const CatBoxItemComponent = ({title, description, icon, delay}: Props) => {
+const CatBoxItemComponent = ({ title, description, icon, delay }: Props) => {
   return (
     <motion.div
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     viewport={{ once: false, amount: 0.25 }}
-    transition={{ duration: 1, delay }}  
+    transition={{ duration: 1, delay }}
       className='w-[296px] h-[228px] flex flex-col p-8 border border-[#6D6E76] hover:bg-[#FFD050] hover:border-0 cursor-pointer'>
       <div className='flex items-center justify-center w-[48px] h-[48px]'>
         {

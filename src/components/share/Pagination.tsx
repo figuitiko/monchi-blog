@@ -2,9 +2,9 @@ interface Props {
   totalPages: number
 }
 
-const Pagination = ({totalPages}: Props) => {
-  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);  
-  return (    
+const Pagination = ({ totalPages }: Props) => {
+  // const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
+  return (
       <nav aria-label='Page navigation example'>
         <ul className='inline-flex -space-x-px text-sm'>
           <li>

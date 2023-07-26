@@ -6,18 +6,18 @@ import { fadeIn } from '@/utils/motions'
 const OurHistoryComponent = () => {
   return (
     <section className='flex mt-[128px] mx-[80px] w-[1280px] h-[705px] p-0 relative'>
-      <motion.picture 
+      <motion.picture
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        initial="hidden"
-        whileInView="show"
+        initial='hidden'
+        whileInView='show'
         viewport={{ once: false, amount: 0.25 }}
       className='w-[949px]'>
-        <Image src='/our-history.jpg' width={949} height={705} alt='history' />        
+        <Image src='/our-history.jpg' width={949} height={705} alt='history' />
       </motion.picture>
-      <motion.div 
+      <motion.div
         variants={fadeIn('down', 'tween', 0.2, 1)}
-        initial="hidden"
-        whileInView="show"
+        initial='hidden'
+        whileInView='show'
         viewport={{ once: false, amount: 0.25 }}
         className='flex flex-col absolute z-10 right-0 bottom-0 w-[706px] h-[584px] p-[80px] bg-white'>
         <h4 className='text-[1rem] uppercase font-inter font-bold text-[#232536] leading-5 tracking-[3px]'>Por qué comenzamos</h4>

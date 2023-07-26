@@ -3,12 +3,15 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 const LoaderOverlayGeneral = () => {
-  const [isVisible, setIsVisible] = useState(true) 
-  useEffect(() => {        
-    const timer = setTimeout(() => {
+  const [isVisible, setIsVisible] = useState(true)
+
+  useEffect(() => {
+    const timer: NodeJS.Timeout = setTimeout(() => {
       setIsVisible((prev) => !prev)
     }, 1500)
-    return () => clearTimeout(timer)
+    return function cleanUp () {
+      clearTimeout(timer)
+    }
   }, [])
   return (
     <AnimatePresence>

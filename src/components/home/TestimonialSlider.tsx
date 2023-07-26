@@ -10,7 +10,7 @@ interface ITestimonial {
   country: string
   province: string
   text: string
-  image: string  
+  image: string
 }
 const testimonials: ITestimonial[] = [
   {
@@ -19,7 +19,7 @@ const testimonials: ITestimonial[] = [
     country: 'Cuba',
     province: 'Santiago de Cuba',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    image: '/testimonial/eynar.png'    
+    image: '/testimonial/eynar.png'
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const testimonials: ITestimonial[] = [
     country: 'EEUU',
     province: 'California',
     text: 'Ipsum amet sit dolor elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    image: '/testimonial/emilitin.png'    
+    image: '/testimonial/emilitin.png'
   },
   {
     id: 3,
@@ -35,15 +35,15 @@ const testimonials: ITestimonial[] = [
     country: 'EEUU',
     province: 'Houston',
     text: 'consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, ',
-    image: '/testimonial/juan.png'    
+    image: '/testimonial/juan.png'
   }
 ]
 
 const TestimonialSlider = () => {
-  const [testimonialsState, setTestimonialsState] = useState<ITestimonial[]>(testimonials)
+  const [testimonialsState] = useState<ITestimonial[]>(testimonials)
   const [activeId, setActiveId] = useState<number>(0)
   const activeTestimonial = testimonialsState[activeId] ? testimonialsState[activeId] : testimonialsState[0]
-  const {id, name, country, province, text, image}   = activeTestimonial  as ITestimonial
+  const { name, country, province, image } = activeTestimonial
   const handleNext = () => {
     if (activeId < testimonialsState.length - 1) {
       setActiveId(activeId + 1)
@@ -60,7 +60,7 @@ const TestimonialSlider = () => {
         {
           activeTestimonial?.text
         }
-      </p>      
+      </p>
         <div className='flex mt-[121px] gap-4'>
           <picture className=''>
             <Image className='rounded-full' src={image} alt={name} width={48} height={48} />

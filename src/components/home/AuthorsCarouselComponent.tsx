@@ -11,7 +11,7 @@ const authors: IAuthor[] = [
       facebook: 'https://www.facebook.com/monchi.pascual',
       twitter: 'https://twitter.com/monchipascual',
       instagram: 'https://www.instagram.com/monchipascual/'
-    },
+    }
   },
   {
     name: 'FranK Freeman',
@@ -20,8 +20,8 @@ const authors: IAuthor[] = [
     socialNetworks: {
       facebook: 'https://www.facebook.com/frank.freeman.7773639',
       twitter: 'https://twitter.com/frankfreeman_',
-      instagram: 'https://www.instagram.com/frank.freeman'    
-    } 
+      instagram: 'https://www.instagram.com/frank.freeman'
+    }
   },
   {
     name: 'Luis Bello',
@@ -31,7 +31,7 @@ const authors: IAuthor[] = [
       facebook: 'https://www.facebook.com/luis.bello.754',
       twitter: 'https://twitter.com/luisbello_',
       instagram: 'https://www.instagram.com/luisbello_/'
-    },
+    }
   },
   {
     name: 'Hermes Alejandro',
@@ -82,7 +82,7 @@ const authors: IAuthor[] = [
       twitter: 'https://twitter.com/joseramonfuen',
       instagram: 'https://www.instagram.com/joseramonfuen/'
     }
-  }   
+  }
 ]
 const AuthorsCarouselComponent = () => {
   return (
@@ -90,9 +90,9 @@ const AuthorsCarouselComponent = () => {
       {
         authors.map((author: IAuthor, index: number) => (
           <Carousel.Item key={index}>
-            <AuthorCarouselItemComponent author={author}  />
+            <AuthorCarouselItemComponent author={author} />
           </Carousel.Item>
-      ))
+        ))
       }
     </Carousel>
   )

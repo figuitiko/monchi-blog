@@ -1,5 +1,4 @@
-import Image from "next/image"
-
+import Image from 'next/image'
 interface Props {
   heading: string
   subHeading: string
@@ -15,7 +14,7 @@ const WhyItemComponent = ({ heading, subHeading, excerpt, haveShape, isRight }: 
   const imageUrl = isRight ? images.right : images.left
   return (
     <div className={`flex w-[1280px] h-[480px] relative mt-[128px] ${isRight && 'flex-row-reverse'} gap-4  `}>
-      <div className={`w-1/2 flex flex-col justify-center ${isRight && 'ml-16'}`}>
+      <div className={`w-1/2 flex flex-col justify-center ${!!isRight && 'ml-16'}`}>
         <h3 className='font-sen text-[36px] font-bold leading-[48px] tracking-[-2px] max-w-[519px]'>
           {heading}
         </h3>

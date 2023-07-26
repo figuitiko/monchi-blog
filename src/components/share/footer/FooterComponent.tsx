@@ -1,7 +1,7 @@
-import Image from "next/image"
-import FooterNavbarComponent from "./FooterNavbarComponent"
-import FooterCtaComponent from "./FooterCtaComponent"
-import FooterContactComponent from "./FooterContactComponent"
+import Image from 'next/image'
+import FooterNavbarComponent from './FooterNavbarComponent'
+import FooterCtaComponent from './FooterCtaComponent'
+import FooterContactComponent from './FooterContactComponent'
 
 export const FooterComponent = () => {
   return (

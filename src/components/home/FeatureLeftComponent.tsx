@@ -2,13 +2,13 @@
 import { fadeIn } from '@/utils/motions'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+
 const FeatureLeftComponent = () => {
   return (
- 
-    <motion.div 
+    <motion.div
       variants={fadeIn('right', 'tween', 0.2, 1)}
-      initial="hidden"
-      whileInView="show"
+      initial='hidden'
+      whileInView='show'
       viewport={{ once: false, amount: 0.25 }}
       className='flex flex-col w-[732px] h-[804px]'>
       <h3 className='font-sen text-[32px] font-bold'>Nota del día</h3>

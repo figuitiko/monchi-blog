@@ -20,11 +20,11 @@ const IndividualPost = async ({ params }: Props) => {
   const date = dateFormatter(data.date)
   const title = data.title.rendered
   let featuredImageUrl = '/default_placeholder.png'
-  if (data._embedded && data._embedded['wp:featuredmedia']) {
+  if (data._embedded?.['wp:featuredmedia']) {
     featuredImageUrl = data._embedded['wp:featuredmedia'][0].source_url
   }
   const content = data.content.rendered
-  const post: IPost  = {
+  const post: IPost = {
     id: data.id,
     author: authorName,
     avatarUrl,

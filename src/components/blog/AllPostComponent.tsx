@@ -4,7 +4,7 @@ import PostBoxComponent from './PostBoxComponent'
 interface Props {
   posts: IPost[]
 }
-const AllPostComponent = ({posts}: Props) => {
+const AllPostComponent = ({ posts }: Props) => {
   return (
     <>
     <div className='w-[1282px] flex flex-col mt-[64px] mb-8'>
@@ -16,7 +16,7 @@ const AllPostComponent = ({posts}: Props) => {
             <PostBoxComponent key={post.id} post={post} />
           ))
         }
-    </div>   
+    </div>
     </>
   )
 }
